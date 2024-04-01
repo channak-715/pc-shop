@@ -1,6 +1,6 @@
 ﻿namespace pc_shop
 {
-    partial class mainapp
+    partial class Sale
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainapp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sale));
             this.panel23 = new System.Windows.Forms.Panel();
             this.button18 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -40,26 +40,19 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel26 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel24 = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel25 = new System.Windows.Forms.Panel();
             this.lbt = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel23.SuspendLayout();
             this.panel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel24.SuspendLayout();
             this.panel25.SuspendLayout();
             this.panel27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel23
@@ -79,8 +72,7 @@
             this.panel23.Location = new System.Drawing.Point(0, 0);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(169, 720);
-            this.panel23.TabIndex = 0;
-            this.panel23.Paint += new System.Windows.Forms.PaintEventHandler(this.panel23_Paint);
+            this.panel23.TabIndex = 1;
             // 
             // button18
             // 
@@ -88,13 +80,13 @@
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button18.ForeColor = System.Drawing.Color.Brown;
-            this.button18.Location = new System.Drawing.Point(0, 663);
+            this.button18.Location = new System.Drawing.Point(0, 672);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(169, 45);
             this.button18.TabIndex = 3;
             this.button18.Text = "Exite";
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click_1);
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button16
             // 
@@ -188,7 +180,6 @@
             this.button10.Text = "    Sale Manage";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -211,6 +202,16 @@
             this.panel26.Size = new System.Drawing.Size(163, 108);
             this.panel26.TabIndex = 2;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(37, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(91, 69);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.White;
@@ -219,7 +220,7 @@
             this.panel24.Location = new System.Drawing.Point(169, 0);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(1031, 34);
-            this.panel24.TabIndex = 0;
+            this.panel24.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
@@ -236,7 +237,7 @@
             this.panel25.Location = new System.Drawing.Point(169, 34);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(1031, 77);
-            this.panel25.TabIndex = 0;
+            this.panel25.TabIndex = 3;
             // 
             // lbt
             // 
@@ -249,191 +250,53 @@
             this.lbt.TabIndex = 0;
             this.lbt.Text = "PC Shop Management System";
             // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel27.Controls.Add(this.label2);
+            this.panel27.Location = new System.Drawing.Point(175, 117);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(1013, 555);
+            this.panel27.TabIndex = 4;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 13);
+            this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "user/admin/Dashboard";
+            this.label2.Text = "Sale Management";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // panel27
+            // Sale
             // 
-            this.panel27.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel27.Controls.Add(this.button25);
-            this.panel27.Controls.Add(this.button24);
-            this.panel27.Controls.Add(this.button23);
-            this.panel27.Controls.Add(this.button22);
-            this.panel27.Controls.Add(this.button21);
-            this.panel27.Controls.Add(this.button20);
-            this.panel27.Controls.Add(this.button19);
-            this.panel27.Controls.Add(this.label2);
-            this.panel27.Location = new System.Drawing.Point(175, 117);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(1013, 547);
-            this.panel27.TabIndex = 1;
-            // 
-            // button19
-            // 
-            this.button19.BackColor = System.Drawing.Color.DarkViolet;
-            this.button19.Location = new System.Drawing.Point(82, 44);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(147, 90);
-            this.button19.TabIndex = 3;
-            this.button19.Text = "Sale";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.DarkViolet;
-            this.button20.Location = new System.Drawing.Point(263, 44);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(147, 90);
-            this.button20.TabIndex = 3;
-            this.button20.Text = "Sale";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button21
-            // 
-            this.button21.BackColor = System.Drawing.Color.DarkViolet;
-            this.button21.Location = new System.Drawing.Point(442, 44);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(147, 90);
-            this.button21.TabIndex = 3;
-            this.button21.Text = "Sale";
-            this.button21.UseVisualStyleBackColor = false;
-            this.button21.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button22
-            // 
-            this.button22.BackColor = System.Drawing.Color.DarkViolet;
-            this.button22.Location = new System.Drawing.Point(626, 44);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(147, 90);
-            this.button22.TabIndex = 3;
-            this.button22.Text = "Sale";
-            this.button22.UseVisualStyleBackColor = false;
-            this.button22.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button23
-            // 
-            this.button23.BackColor = System.Drawing.Color.DarkViolet;
-            this.button23.Location = new System.Drawing.Point(806, 44);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(147, 90);
-            this.button23.TabIndex = 3;
-            this.button23.Text = "Sale";
-            this.button23.UseVisualStyleBackColor = false;
-            this.button23.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button24
-            // 
-            this.button24.BackColor = System.Drawing.Color.DarkViolet;
-            this.button24.Location = new System.Drawing.Point(263, 168);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(147, 90);
-            this.button24.TabIndex = 3;
-            this.button24.Text = "Sale";
-            this.button24.UseVisualStyleBackColor = false;
-            this.button24.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button25
-            // 
-            this.button25.BackColor = System.Drawing.Color.DarkViolet;
-            this.button25.Location = new System.Drawing.Point(82, 168);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(147, 90);
-            this.button25.TabIndex = 3;
-            this.button25.Text = "Sale";
-            this.button25.UseVisualStyleBackColor = false;
-            this.button25.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(37, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(91, 69);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // mainapp
-            // 
-            this.BackColor = System.Drawing.Color.White;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 720);
             this.Controls.Add(this.panel27);
             this.Controls.Add(this.panel25);
             this.Controls.Add(this.panel24);
             this.Controls.Add(this.panel23);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.Off;
-            this.Name = "mainapp";
-            this.RightToLeftLayout = true;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Load += new System.EventHandler(this.mainapp_Load_1);
+            this.Name = "Sale";
+            this.Text = "Sale";
             this.panel23.ResumeLayout(false);
             this.panel26.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel24.ResumeLayout(false);
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Panel panel25;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lbt;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Panel panel26;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
@@ -441,15 +304,14 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Label lbt;
         private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Label label2;
     }
 }

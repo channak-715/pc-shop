@@ -96,5 +96,21 @@ namespace pc_shop
         {
             Application.Exit();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {   
+            Sale sale = new Sale();
+            sale.Show();
+        }
     }
 }
