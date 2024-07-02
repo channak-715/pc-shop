@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace pc_shop
 {
-    public partial class Sale : Form
+    public partial class Sale : menus
     {
         public Sale()
         {
@@ -25,6 +25,13 @@ namespace pc_shop
         private void button18_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            menus dashboard = new menus();
+            dashboard.Show();
+            this.Hide();
         }
     }
 }

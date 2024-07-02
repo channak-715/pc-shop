@@ -8,18 +8,41 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using pc_shop.Singleton;
 
 namespace pc_shop
 {
     public partial class FormLogin : Form
     {
+        SqlConnection _conn;
+        SqlCommand cmd;
+
         public FormLogin()
         {
             InitializeComponent();
+            connect();
 
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LNQF7KP;Initial Catalog=PCShopManagementSystem;Integrated Security=True");
+        private void connect()
+        {
+            try
+            {
+               Connector connector = Connector.GetConnector();
+                if (connector != null)
+                {
+                    _conn = connector.Connection();
+                    _conn.Open();
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        /*SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LNQF7KP;Initial Catalog=PCShopManagementSystem;Integrated Security=True"); */
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -66,39 +89,56 @@ namespace pc_shop
            
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUser_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPass_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
             String username, password;
 
             username = txtUser.Text;
-            password = txtpass.Text;
+            password = txtPass.Text;
 
             try
             {
-                String querry = "SELECT * FROM tbl_login WHERE username = '"+txtUser.Text+"' AND password = '"+txtpass.Text+"' ";
-                SqlDataAdapter sda = new SqlDataAdapter(querry, conn);
+                String querry = "SELECT * FROM tbl_login WHERE username = '" + txtUser.Text + "' AND password = '" + txtPass.Text + "' ";
+                SqlDataAdapter sda = new SqlDataAdapter(querry, _conn);
 
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
-                if(dt.Rows.Count > 0)
+                if (dt.Rows.Count > 0)
                 {
                     username = txtUser.Text;
-                    password = txtpass.Text;
+                    password = txtPass.Text;
 
                     //page next
 
-                    mainapp form2 = new mainapp();
-                    form2.Show();
+                    dashboard dashboard = new dashboard();
+                    dashboard.Show();
                     this.Hide();
 
-                
+
+
+
                 }
                 else
                 {
-                    MessageBox.Show("Invalid login details", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    
-                    txtpass.Clear();
+                    MessageBox.Show("Invalid login details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    txtPass.Clear();
                     txtUser.Focus();
                 }
             }
@@ -108,7 +148,7 @@ namespace pc_shop
             }
             finally
             {
-                conn.Close();
+                _conn.Close();
             }
 
         }

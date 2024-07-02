@@ -112,5 +112,17 @@ namespace pc_shop
             Sale sale = new Sale();
             sale.Show();
         }
+
+        private void panel27_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

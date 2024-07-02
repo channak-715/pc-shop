@@ -1,6 +1,6 @@
 ﻿namespace pc_shop
 {
-    partial class Sale
+    partial class setting
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label18 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Sale
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(559, 336);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(40, 13);
+            this.label18.TabIndex = 9;
+            this.label18.Text = "Setting";
+            // 
+            // setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 720);
-            this.Name = "Sale";
+            this.Controls.Add(this.label18);
+            this.Name = "setting";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sale";
+            this.Text = "setting";
+            this.Controls.SetChildIndex(this.label18, 0);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label18;
     }
 }
